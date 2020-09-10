@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Список изображений</title>
+</head>
+<body>
+	<a href='/user/logout'>Выйти</a>
+	<h1>Список изображений</h1>
+	{% if images %}
+		{%for image in images%}
+		<p><a href="/edit/{{image.pk}}">{{image.name}}</a></p>
+		{%endfor%}
+	{%else%}
+	<p>Нет доступных изображений</p>
+	{%endif%}
+	<p><a href="/add">Добавить изображение</a></p>
+</body>
+</html>

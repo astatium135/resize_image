@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Изменить изображение</title>
+</head>
+<body>
+	<a href="/">Назад к списку</a>
+	<h1>{{name}}</h1>
+	<form method="POST" novalidate>
+		{% csrf_token %}
+		{% include 'form.html' %}
+		<p><input type="submit" value="Отправить"></p>
+		{% if image %}
+		<img src="{{image}}">
+		{% endif %}
+	</form>
+</div>
+</body>
+</html>

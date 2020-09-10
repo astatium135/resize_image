@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Регистрация</title>
+</head>
+<form method="POST" novalidate>
+	{% csrf_token %}
+	{% include 'form.html' %}
+	<p><input type="submit" value="Регистрация"></p>
+</form>
+</body>
+</html>
